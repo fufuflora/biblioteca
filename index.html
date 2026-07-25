@@ -1,259 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Guia • Fufu Flora</title>
 
-<title>Fufu Flora Biblioteca</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
+:root{
+ --main:#72938d;
+ --bg:#fffbf9;
+ --footer:#edecea;
 }
-
+*{box-sizing:border-box}
+html,body{
+ margin:0;
+ padding:0;
+}
 body{
-
-background:#fffbf9;
-font-family:'Montserrat',sans-serif;
-color:#6f8d89;
-
+ background:var(--bg);
+ color:#333;
+ font:14px Montserrat,sans-serif;
 }
-
-/* HEADER */
-
 header{
-
-background:#fffbf9;
-border-bottom:1px solid #ece5df;
-
+ background:var(--bg);
+ border-bottom:1px solid rgba(114,147,141,.10);
 }
-
-.header{
-
-max-width:1200px;
-margin:auto;
-
-height:95px;
-
-display:flex;
-align-items:center;
-justify-content:space-between;
-
-padding:0 35px;
-
-}
-
-.back{
-
-text-decoration:none;
-font-size:15px;
-font-weight:600;
-
-color:#6f8d89;
-
-transition:.25s;
-
-}
-
-.back:hover{
-
-opacity:.7;
-
-}
-
-.logo img{
-
-height:60px;
-
-}
-
-/* HERO */
-
-.hero{
-
-background:white;
-
-padding:70px 20px;
-
-border-bottom:1px solid #f1ebe6;
-
-}
-
-.hero-inner{
-
-max-width:900px;
-margin:auto;
-
-}
-
-.hero h1{
-
-font-family:'Playfair Display',serif;
-font-size:54px;
-
-color:#7d9d98;
-
-margin-bottom:15px;
-
-}
-
-.hero p{
-
-font-size:18px;
-line-height:1.7;
-
-color:#97a8a4;
-
-max-width:650px;
-
-}
-
-/* CONTENT */
-
 .container{
-
-max-width:900px;
-margin:auto;
-
-padding:70px 20px;
-
+ max-width:1200px;
+ margin:0 auto;
+ padding:0 30px;
 }
-
-.instagram{
-
-display:flex;
-justify-content:center;
-
+.topbar{
+ position:relative;
+ display:flex;
+ align-items:center;
+ height:92px;
 }
-
-/* FOOTER */
-
-footer{
-
-margin-top:80px;
-
-background:#d6bd95;
-
-padding:35px;
-
-text-align:center;
-
+.back{
+ color:var(--main);
+ text-decoration:none;
+ font-weight:500;
+ font-size:14px;
 }
-
-footer a{
-
-color:white;
-text-decoration:none;
-
-font-weight:600;
-
-font-size:15px;
-
+.logo{
+ position:absolute;
+ left:50%;
+ transform:translateX(-50%);
 }
-
-footer a:hover{
-
-opacity:.8;
-
+.logo img{
+ width:210px;
+ height:auto;
+ display:block;
 }
-
-/* MOBILE */
-
-@media(max-width:700px){
-
-.header{
-
-padding:20px;
-height:auto;
-
-flex-direction:column;
-gap:20px;
-
+.titlebar{
+ background:#fff;
+ border-bottom:1px solid rgba(114,147,141,.08);
 }
-
-.hero{
-
-padding:45px 20px;
-
+.titlewrap{
+ padding:26px 30px;
 }
-
-.hero h1{
-
-font-size:38px;
-
+h1{
+ margin:0;
+ font-family:"Playfair Display",serif;
+ font-size:28px;
+ font-weight:700;
+ line-height:1.2;
+ color:var(--main);
 }
-
-.hero p{
-
-font-size:16px;
-
+.content{
+ padding:32px 30px 60px;
 }
-
+.embed{
+ background:#fff;
 }
-
+.social-footer{
+ margin-top:40px;
+ background:#cbb899;
+}
+.social-footer .footer-inner{
+ padding:35px 30px;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+}
+.social-icon{
+ display:inline-flex;
+ align-items:center;
+ justify-content:center;
+ width:40px;
+ height:40px;
+ margin:0 15px;
+ border-radius:50%;
+ background:#fffbf9;
+ color:#cbb899;
+ text-decoration:none;
+ transition:opacity .2s ease;
+}
+.social-icon:hover{opacity:.8;}
+.icon-inline{display:inline-block;height:1em;overflow:visible;}
+.icon-lg{font-size:1.33333em;line-height:.75em;}
+.icon-inline.icon-lg{vertical-align:-.225em;}
+.social-icon svg{width:16px;height:16px;fill:currentColor;}
 </style>
-
 </head>
-
 <body>
 
 <header>
+  <div class="container topbar">
+    <a class="back" href="https://www.fufuflora.com/biblioteca/">← Voltar para a Biblioteca</a>
 
-<div class="header">
-
-<a href="https://YOUR-LIBRARY-HOME-PAGE" class="back">
-← Back to Biblioteca
-</a>
-
-<div class="logo">
-<img src="logo.png">
-</div>
-
-<div style="width:150px;"></div>
-
-</div>
-
+    <a class="logo" href="https://www.fufuflora.com/">
+      <img src="logo.png" alt="Fufu Flora">
+    </a>
+  </div>
 </header>
 
-<section class="hero">
-
-<div class="hero-inner">
-
-<h1>Guide Title</h1>
-
-<p>
-Write a short description here explaining what this guide is about.
-</p>
-
-</div>
-
+<section class="titlebar">
+  <div class="container titlewrap">
+    <h1>Guia Básico para Ratos</h1>
+  </div>
 </section>
 
-<section class="container">
-
-<div class="instagram">
+<main class="container content">
+  <div class="embed">
 
 YOUR_INSTAGRAM_EMBED_HERE
 
-</div>
+  </div>
+</main>
 
-</section>
-
-<footer>
-
-<a href="https://www.instagram.com/fufuflora/">
-Instagram
-</a>
-
+<footer class="social-footer">
+  <div class="container footer-inner">
+    <a class="social-icon" href="https://instagram.com/fufuflora" target="_blank" aria-label="Instagram">
+      <svg class="icon-inline icon-lg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+        <path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9S160.5 370.8 224.1 370.8 339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.2 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.5 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.9-26.9 26.9-14.9 0-26.9-12-26.9-26.9s12-26.9 26.9-26.9 26.9 12 26.9 26.9zM398.8 80c-22.1-22.1-51.5-34.2-82.8-34.2H132C67.3 45.8 14.8 98.3 14.8 163v184c0 64.7 52.5 117.2 117.2 117.2h184c64.7 0 117.2-52.5 117.2-117.2V163c0-31.3-12.2-60.7-34.4-83zM398 347c0 42.9-34.9 77.8-77.8 77.8H132c-42.9 0-77.8-34.9-77.8-77.8V163c0-42.9 34.9-77.8 77.8-77.8h188.2c20.8 0 40.4 8.1 55.1 22.8 14.7 14.7 22.8 34.3 22.8 55.1V347z"/>
+      </svg>
+    </a>
+  </div>
 </footer>
 
 <script async src="//www.instagram.com/embed.js"></script>
