@@ -1,47 +1,262 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Biblioteca Fufu Flora</title>
+
+<title>Fufu Flora Biblioteca</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 body{
-    margin:0;
-    background:#f8f5f2;
-    font-family:Arial,sans-serif;
-    display:flex;
-    justify-content:center;
-    padding:40px;
+
+background:#fffbf9;
+font-family:'Montserrat',sans-serif;
+color:#6f8d89;
+
 }
+
+/* HEADER */
+
+header{
+
+background:#fffbf9;
+border-bottom:1px solid #ece5df;
+
+}
+
+.header{
+
+max-width:1200px;
+margin:auto;
+
+height:95px;
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+padding:0 35px;
+
+}
+
+.back{
+
+text-decoration:none;
+font-size:15px;
+font-weight:600;
+
+color:#6f8d89;
+
+transition:.25s;
+
+}
+
+.back:hover{
+
+opacity:.7;
+
+}
+
+.logo img{
+
+height:60px;
+
+}
+
+/* HERO */
+
+.hero{
+
+background:white;
+
+padding:70px 20px;
+
+border-bottom:1px solid #f1ebe6;
+
+}
+
+.hero-inner{
+
+max-width:900px;
+margin:auto;
+
+}
+
+.hero h1{
+
+font-family:'Playfair Display',serif;
+font-size:54px;
+
+color:#7d9d98;
+
+margin-bottom:15px;
+
+}
+
+.hero p{
+
+font-size:18px;
+line-height:1.7;
+
+color:#97a8a4;
+
+max-width:650px;
+
+}
+
+/* CONTENT */
+
 .container{
-    max-width:900px;
-    width:100%;
+
+max-width:900px;
+margin:auto;
+
+padding:70px 20px;
+
 }
-h1{
-    text-align:center;
-    color:#6b8d87;
+
+.instagram{
+
+display:flex;
+justify-content:center;
+
 }
-.instagram-media{
-    margin:auto!important;
+
+/* FOOTER */
+
+footer{
+
+margin-top:80px;
+
+background:#d6bd95;
+
+padding:35px;
+
+text-align:center;
+
 }
+
+footer a{
+
+color:white;
+text-decoration:none;
+
+font-weight:600;
+
+font-size:15px;
+
+}
+
+footer a:hover{
+
+opacity:.8;
+
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+.header{
+
+padding:20px;
+height:auto;
+
+flex-direction:column;
+gap:20px;
+
+}
+
+.hero{
+
+padding:45px 20px;
+
+}
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+.hero p{
+
+font-size:16px;
+
+}
+
+}
+
 </style>
 
 </head>
 
 <body>
 
-<div class="container">
+<header>
 
-<h1>Guia Básico</h1>
+<div class="header">
 
-<blockquote class="instagram-media"
-data-instgrm-permalink="https://www.instagram.com/p/DWotfpgDXT5/"
-data-instgrm-version="14"></blockquote>
+<a href="https://YOUR-LIBRARY-HOME-PAGE" class="back">
+← Back to Biblioteca
+</a>
+
+<div class="logo">
+<img src="logo.png">
+</div>
+
+<div style="width:150px;"></div>
 
 </div>
 
-<script async src="https://www.instagram.com/embed.js"></script>
+</header>
+
+<section class="hero">
+
+<div class="hero-inner">
+
+<h1>Guide Title</h1>
+
+<p>
+Write a short description here explaining what this guide is about.
+</p>
+
+</div>
+
+</section>
+
+<section class="container">
+
+<div class="instagram">
+
+YOUR_INSTAGRAM_EMBED_HERE
+
+</div>
+
+</section>
+
+<footer>
+
+<a href="https://www.instagram.com/fufuflora/">
+Instagram
+</a>
+
+</footer>
+
+<script async src="//www.instagram.com/embed.js"></script>
 
 </body>
 </html>
