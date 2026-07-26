@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Guia • Fufu Flora</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+ --main:#72938d;
+ --bg:#fffbf9;
+ --footer:#edecea;
+}
+*{box-sizing:border-box}
+html,body{
+ margin:0;
+ padding:0;
+}
+body{
+ background:var(--bg);
+ color:#333;
+ font:14px Montserrat,sans-serif;
+}
+header{
+ background:var(--bg);
+ border-bottom:1px solid rgba(114,147,141,.10);
+}
+ 
+.container{
+ max-width:1200px;
+ margin:0 auto;
+ padding:0 30px;
+}
+.topbar{
+ position:relative;
+ display:flex;
+ align-items:center;
+ height:92px;
+}
+.back{
+ color:var(--main);
+ text-decoration:none;
+ font-weight:500;
+ font-size:14px;
+}
+.logo{
+ position:absolute;
+ left:50%;
+ transform:translateX(-50%);
+}
+.logo img{
+ width:130px;
+ height:auto;
+ display:block;
+}
+.titlebar{
+ background:#fff;
+ border-bottom:1px solid rgba(114,147,141,.08);
+}
+.titlewrap{
+ padding:26px 30px;
+}
+h1{
+ margin:0;
+ font-family:"Playfair Display",serif;
+ font-size:28px;
+ font-weight:700;
+ line-height:1.2;
+ color:var(--main);
+}
+.content{
+ padding:32px 30px 60px;
+}
+.embed{
+ background:transparent;
+ width:100%;
+ display:flex;
+ justify-content:center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.social-footer{
+ margin-top:40px;
+ background:#cbb899;
+}
+.social-footer .footer-inner{
+ padding:35px 30px;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+}
+.social-icon{
+ display:inline-flex;
+ align-items:center;
+ justify-content:center;
+ width:40px;
+ height:40px;
+ margin:0 15px;
+ border-radius:50%;
+ background:#fffbf9;
+ color:#cbb899;
+ text-decoration:none;
+ transition:opacity .2s ease;
+}
+.social-icon:hover{opacity:.8;}
+.icon-inline{display:inline-block;height:1em;overflow:visible;}
+.icon-lg{font-size:1.33333em;line-height:.75em;}
+.icon-inline.icon-lg{vertical-align:-.225em;}
+.social-icon svg{width:16px;height:16px;fill:currentColor;display:block;}
+
+.myths{
+  max-width:700px;
+  margin:20px auto;
+}
+
+.myth-card{
+  margin:14px 0;
+}
+
+.myth-button{
+  width:100%;
+  padding:16px 22px;
+  border:1px solid #d9c8aa;
+  border-radius:16px;
+  background:#fffaf7;
+  color:#72938d;
+  font-family:Montserrat,sans-serif;
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer;
+  text-align:left;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 3px 10px rgba(0,0,0,.04);
+}
+
+.myth-button:hover{
+  background:#f7f0e8;
+}
+
+.myth-button::after{
+  content:"+";
+  color:#cbb899;
+  font-size:24px;
+}
+
+.myth-content{
+  display:none;
+  margin-top:20px;
+}
+
+.myth-content.active{
+  display:block;
+}
+
+
+.guide-text{
+  padding:20px 0;
+  background:transparent;
+  border:none;
+  border-radius:0;
+  color:#333;
+  line-height:1.7;
+}
+
+.guide-text h2{
+  margin-top:0;
+  color:#72938d;
+  font-family:"Playfair Display",serif;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container topbar">
+    <a class="back" href="https://www.fufuflora.com/biblioteca/">← Voltar para a Biblioteca</a>
+
+    <a class="logo" href="https://www.fufuflora.com/">
+      <img src="//acdn-us.mitiendanube.com/stores/005/190/037/themes/common/logo-715392400-1731273569-4f7786893576aa8ec7292192c05de0ca1731273569-480-0.webp" alt="Fufu Flora">
+    </a>
+  </div>
+</header>
+
+<section class="titlebar">
+  <div class="container titlewrap">
+    <h1>Desmistificando Ratos</h1>
+  </div>
+</section>
+
+<main class="container content">
+
+<section class="myths">
+
+  <div class="myth-card">
+    <button class="myth-button" onclick="toggleMyth('myth1')">
+      #01 - Ratos não invadiram as cidades. 
+    </button>
+    <div id="myth1" class="myth-content">
+      <div class="guide-text">
+        <h2>Seção em construção</h2>
+        <p>Texto explicativo sobre este tema será adicionado aqui.</p>
+        <p>Em breve, este espaço terá informações completas para ajudar você a escolher produtos seguros e adequados.</p>
+      </div>
+    </div>
+
+  <div class="myth-card">
+    <button class="myth-button" onclick="toggleMyth('myth2')">
+      #02 - Ratos não criaram o esgoto. Nem o lixo.
+    </button>
+    <div id="myth2" class="myth-content">
+      <div class="guide-text">
+        <h2>Seção em construção</h2>
+        <p>Texto explicativo sobre este tema será adicionado aqui.</p>
+        <p>Em breve, este espaço terá informações completas para ajudar você a escolher produtos seguros e adequados.</p>
+      </div>
+    </div>
+
+  <div class="myth-card">
+    <button class="myth-button" onclick="toggleMyth('myth3')">
+      #03 - "Praga" não é uma espécie. É um rótulo.
+    </button>
+    <div id="myth3" class="myth-content">
+      <div class="guide-text">
+        <h2>Seção em construção</h2>
+        <p>Texto explicativo sobre este tema será adicionado aqui.</p>
+        <p>Em breve, este espaço terá informações completas para ajudar você a escolher produtos seguros e adequados.</p>
+      </div>
+    </div>
+
+  <div class="myth-card">
+    <button class="myth-button" onclick="toggleMyth('myth4')">
+      #04 - O medo transforma animais em monstros.
+    </button>
+    <div id="myth4" class="myth-content">
+      <div class="guide-text">
+        <h2>Seção em construção</h2>
+        <p>Texto explicativo sobre este tema será adicionado aqui.</p>
+        <p>Em breve, este espaço terá informações completas para ajudar você a escolher produtos seguros e adequados.</p>
+      </div>
+    </div>
+
+   <div class="myth-card">
+    <button class="myth-button" onclick="toggleMyth('myth5')">
+      #05 - O medo transforma animais em monstros.
+    </button>
+    <div id="myth5" class="myth-content">
+      <div class="guide-text">
+        <h2>Seção em construção</h2>
+        <p>Texto explicativo sobre este tema será adicionado aqui.</p>
+        <p>Em breve, este espaço terá informações completas para ajudar você a escolher produtos seguros e adequados.</p>
+      </div>
+    </div>
+
+   <div class="myth-card">
+    <button class="myth-button" onclick="toggleMyth('myth6')">
+      #06 - Por que matar um rato é algo tão normalizado?
+    </button>
+    <div id="myth6" class="myth-content">
+      <div class="guide-text">
+        <h2>Seção em construção</h2>
+        <p>Texto explicativo sobre este tema será adicionado aqui.</p>
+        <p>Em breve, este espaço terá informações completas para ajudar você a escolher produtos seguros e adequados.</p>
+      </div>
+    </div>
+ 
+</section>
+
+</main>
+
+<footer class="social-footer">
+  <div class="container footer-inner">
+    <a class="social-icon" href="https://instagram.com/fufu.flora" target="_blank" aria-label="Instagram">
+      <svg class="icon-inline icon-lg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+        <path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9S160.5 370.8 224.1 370.8 339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.2 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.5 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.9-26.9 26.9-14.9 0-26.9-12-26.9-26.9s12-26.9 26.9-26.9 26.9 12 26.9 26.9zM398.8 80c-22.1-22.1-51.5-34.2-82.8-34.2H132C67.3 45.8 14.8 98.3 14.8 163v184c0 64.7 52.5 117.2 117.2 117.2h184c64.7 0 117.2-52.5 117.2-117.2V163c0-31.3-12.2-60.7-34.4-83zM398 347c0 42.9-34.9 77.8-77.8 77.8H132c-42.9 0-77.8-34.9-77.8-77.8V163c0-42.9 34.9-77.8 77.8-77.8h188.2c20.8 0 40.4 8.1 55.1 22.8 14.7 14.7 22.8 34.3 22.8 55.1V347z"/>
+      </svg>
+    </a>
+  </div>
+</footer>
+
+
+
+<script>
+
+function toggleMyth(id){
+  document.getElementById(id).classList.toggle('active');
+}
+
+
+</script>
+</body>
+</html>
