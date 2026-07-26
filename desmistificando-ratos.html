@@ -280,30 +280,43 @@ h1{
 
 
 <script>
-let currentSlide = 0;
-
-function moveSlide(direction) {
-  const slides = document.querySelectorAll('.slide');
-
-  slides[currentSlide].classList.remove('active');
-
-  currentSlide += direction;
-
-  if (currentSlide >= slides.length) {
-    currentSlide = 0;
-  }
-
-  if (currentSlide < 0) {
-    currentSlide = slides.length - 1;
-  }
-
-  slides[currentSlide].classList.add('active');
-}
 
 function toggleMyth(id){
   document.getElementById(id).classList.toggle('active');
 }
-</script>
 
+
+function moveMythSlide(slidesId, direction){
+
+  const container = document.getElementById(slidesId);
+  const slides = container.querySelectorAll('.slide');
+
+  let current = 0;
+
+  slides.forEach((slide,index)=>{
+    if(slide.classList.contains('active')){
+      current = index;
+    }
+    slide.classList.remove('active');
+  });
+
+
+  current += direction;
+
+
+  if(current >= slides.length){
+    current = 0;
+  }
+
+  if(current < 0){
+    current = slides.length - 1;
+  }
+
+
+  slides[current].classList.add('active');
+
+}
+
+</script>
 </body>
 </html>
