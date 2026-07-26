@@ -158,23 +158,41 @@ h1{
 .icon-inline.icon-lg{vertical-align:-.225em;}
 .social-icon svg{width:16px;height:16px;fill:currentColor;}
 
+.myths{
+  max-width:700px;
+  margin:20px auto;
+}
+
 .myth-card{
-  margin:25px auto;
-  max-width:600px;
+  margin:14px 0;
 }
 
 .myth-button{
   width:100%;
-  padding:16px 20px;
-  border:none;
-  border-radius:20px;
-  background:#72938d;
-  color:white;
+  padding:16px 22px;
+  border:1px solid #d9c8aa;
+  border-radius:16px;
+  background:#fffaf7;
+  color:#72938d;
   font-family:Montserrat,sans-serif;
   font-size:16px;
   font-weight:600;
   cursor:pointer;
   text-align:left;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 3px 10px rgba(0,0,0,.04);
+}
+
+.myth-button:hover{
+  background:#f7f0e8;
+}
+
+.myth-button::after{
+  content:"+";
+  color:#cbb899;
+  font-size:24px;
 }
 
 .myth-content{
@@ -207,34 +225,8 @@ h1{
 </section>
 
 <main class="container content">
-  <div class="embed">
-    <div class="carousel">
-      <button class="prev" onclick="moveSlide(-1)">‹</button>
-
-      <div class="slides">
-        <img src="https://i.ibb.co/rKnnYgZr/1.webp" class="slide active">
-        <img src="https://i.ibb.co/6cQtLR36/2.webp" class="slide">
-        <img src="https://i.ibb.co/MkqtP9Wh/3.webp" class="slide">
-        <img src="https://i.ibb.co/hxP29z65/4.webp" class="slide">
-        <img src="https://i.ibb.co/DDVkygk9/5.webp" class="slide">
-        <img src="https://i.ibb.co/cSwJrzpC/7.webp" class="slide">
-        <img src="https://i.ibb.co/yFmWd4wW/6.webp" class="slide">
-        <img src="https://i.ibb.co/35kRLvyT/8.webp" class="slide">
-        <img src="https://i.ibb.co/bjP8NSz1/9.webp" class="slide">
-        <img src="https://i.ibb.co/mrcKVsMk/10.webp" class="slide">
-        <img src="https://i.ibb.co/mrN36M6Z/11.webp" class="slide">
-        <img src="https://i.ibb.co/jZRKxswf/12.webp" class="slide">
-        <img src="https://i.ibb.co/0yhGSKv9/13.webp" class="slide">
-      </div>
-
-      <button class="next" onclick="moveSlide(1)">›</button>
-    </div>
-  </div>
 
 <section class="myths">
-  <h2 style="text-align:center; font-family:'Playfair Display',serif; color:#72938d; margin-top:50px;">
-    Desmistificando Ratos
-  </h2>
 
   <div class="myth-card">
     <button class="myth-button" onclick="toggleMyth('myth1')">
@@ -262,6 +254,7 @@ h1{
       <!-- conteúdo do episódio 3 -->
     </div>
   </div>
+
 </section>
 
 </main>
