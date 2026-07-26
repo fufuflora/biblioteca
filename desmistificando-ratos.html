@@ -220,7 +220,7 @@ h1{
 
 <section class="titlebar">
   <div class="container titlewrap">
-    <h1>Guia Básico para Ratos</h1>
+    <h1>Desmistificando Ratos</h1>
   </div>
 </section>
 
@@ -230,16 +230,24 @@ h1{
 
   <div class="myth-card">
     <button class="myth-button" onclick="toggleMyth('myth1')">
-      🐭 Episódio 1 - Título do post
+      #01 - Ratos não invadiram as cidades
     </button>
     <div id="myth1" class="myth-content">
-      <!-- conteúdo do episódio 1 -->
+<div class="carousel">
+        <button class="prev" onclick="moveMythSlide('slides1',-1)">‹</button>
+        <div class="slides" id="slides1">
+          <img src="https://i.ibb.co/hF5wgP06/1.png" class="slide active">
+          <img src="https://i.ibb.co/SX3mvv7Y/2.png" class="slide">
+          <img src="https://i.ibb.co/dH613M3/3.png" class="slide">
+        </div>
+        <button class="next" onclick="moveMythSlide('slides1',1)">›</button>
+      </div>    
     </div>
   </div>
 
   <div class="myth-card">
     <button class="myth-button" onclick="toggleMyth('myth2')">
-      🐭 Episódio 2 - Título do post
+      #02 - Ratos não criaram o esgoto nem o lixo
     </button>
     <div id="myth2" class="myth-content">
       <!-- conteúdo do episódio 2 -->
@@ -248,7 +256,7 @@ h1{
 
   <div class="myth-card">
     <button class="myth-button" onclick="toggleMyth('myth3')">
-      🐭 Episódio 3 - Título do post
+      #03 - "Praga" não é uma espécie. É um rótulo
     </button>
     <div id="myth3" class="myth-content">
       <!-- conteúdo do episódio 3 -->
