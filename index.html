@@ -74,7 +74,60 @@ h1{
  padding:32px 30px 60px;
 }
 .embed{
- background:#fff;
+ background:transparent;
+ width:100%;
+ display:flex;
+ justify-content:center;
+}
+
+.carousel{
+ width:100%;
+ max-width:800px;
+ position:relative;
+ overflow:hidden;
+ margin:0 auto;
+}
+
+.slides{
+ width:100%;
+}
+
+.slide{
+ width:100%;
+ height:auto;
+ display:none;
+}
+
+.slide.active{
+ display:block;
+}
+
+.prev,
+.next{
+ position:absolute;
+ top:50%;
+ transform:translateY(-50%);
+ z-index:5;
+ width:42px;
+ height:42px;
+ border:none;
+ border-radius:50%;
+ background:rgba(255,255,255,.85);
+ color:#72938d;
+ font-size:32px;
+ line-height:1;
+ cursor:pointer;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+}
+
+.prev{
+ left:15px;
+}
+
+.next{
+ right:15px;
 }
 .social-footer{
  margin-top:40px;
@@ -160,7 +213,7 @@ h1{
   </div>
 </footer>
 
-<script async src="//www.instagram.com/embed.js"></script>
+
 
 </body>
 </html>
