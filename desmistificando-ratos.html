@@ -259,7 +259,7 @@ h1{
 <div class="carousel">
         <button class="prev" onclick="moveMythSlide('slides2',-1)">‹</button>
         <div class="slides" id="slides2">
-          <img src="https://i.ibb.co/cSQZ2PP6/1.png" class="slide active">
+          <img src="https://i.ibb.co/cSQZ2PP6/1.png" class="slide">
           <img src="https://i.ibb.co/DPmchfqT/2.png" class="slide">
           <img src="https://i.ibb.co/0R4JRnQS/3.png" class="slide">
           <img src="https://i.ibb.co/fdPVc3tt/4.png" class="slide">
@@ -281,8 +281,23 @@ h1{
       #03 - "Praga" não é uma espécie. É um rótulo
     </button>
     <div id="myth3" class="myth-content">
-      <!-- conteúdo do episódio 3 -->
-    </div>
+<div class="carousel">
+        <button class="prev" onclick="moveMythSlide('slides3',-1)">‹</button>
+        <div class="slides" id="slides3">
+          <img src="https://i.ibb.co/cSQZ2PP6/1.png" class="slide">
+          <img src="https://i.ibb.co/DPmchfqT/2.png" class="slide">
+          <img src="https://i.ibb.co/0R4JRnQS/3.png" class="slide">
+          <img src="https://i.ibb.co/fdPVc3tt/4.png" class="slide">
+          <img src="https://i.ibb.co/fVRxvzfd/5.png" class="slide">
+          <img src="https://i.ibb.co/9ktyRK4j/6.png" class="slide">
+          <img src="https://i.ibb.co/v6pvKTfH/7.png" class="slide">
+          <img src="https://i.ibb.co/b5MynPF3/8.png" class="slide">
+          <img src="https://i.ibb.co/nqT6BqQH/9.png" class="slide">
+          <img src="https://i.ibb.co/QFzZW2CB/10.png" class="slide">
+          <img src="https://i.ibb.co/CdvS0Q0/11.png" class="slide">
+        </div>
+        <button class="next" onclick="moveMythSlide('slides3',1)">›</button>
+      </div>        </div>
   </div>
 
 </section>
@@ -313,18 +328,17 @@ function moveMythSlide(slidesId, direction){
   const container = document.getElementById(slidesId);
   const slides = container.querySelectorAll('.slide');
 
-  let current = 0;
+  let current = Array.from(slides).findIndex(slide =>
+    slide.classList.contains('active')
+  );
 
-  slides.forEach((slide,index)=>{
-    if(slide.classList.contains('active')){
-      current = index;
-    }
-    slide.classList.remove('active');
-  });
+  if(current === -1){
+    current = 0;
+  }
 
+  slides[current].classList.remove('active');
 
   current += direction;
-
 
   if(current >= slides.length){
     current = 0;
@@ -333,7 +347,6 @@ function moveMythSlide(slidesId, direction){
   if(current < 0){
     current = slides.length - 1;
   }
-
 
   slides[current].classList.add('active');
 
